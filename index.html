@@ -1,1 +1,277 @@
-hello world
+<!DOCTYPE html>
+<!--[if IE 8]> 
+<html lang="en" class="ie8">
+<![endif]-->  
+<!--[if IE 9]> 
+<html lang="en" class="ie9">
+<![endif]-->  
+<!--[if !IE]><!--> 
+<html lang="en">
+<!--<![endif]-->  
+<head>
+    <title>Vladimir Pustosmekhov, software developer</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .aside.feedback blockquote {
+            font-size: 13px;
+        }
+        .aside.feedback blockquote .author {
+            font-weight: 800;
+            margin-top: 10px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img class="profile-image img-responsive pull-left" src="assets/images/profile.jpg" alt="Vladimir Ivanov" />
+            <div class="profile-content pull-left">
+                <h1 class="name">Vladimir Pustosmekhov</h1>
+                <h2 class="desc">Software Developer</h2>
+                <ul class="social list-inline">
+                    <li><a href="#" target="_blank"><i class="fa" style="background: url(assets/images/upwork-sm.png) 0 1px no-repeat; width: 24px;">&nbsp;</i></a></li>
+                    <li><a href="https://github.com/themylogin" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+                    <li class="last-item"><a href="mailto:themylogin@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+            <!--//profile-->
+            <a class="btn btn-cta-primary pull-right" href="mailto:themylogin@gmail.com" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>              
+        </div>
+        <!--//container-->
+    </header>
+    <!--//header-->
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+                <section class="about section">
+                    <div class="section-inner">
+                        <h2 class="heading">About Me</h2>
+                        <div class="content">
+                            <p>I'm a freelance developer, specialising in server-side code (mostly, python). I also practice DevOps (AWS, Docker), enjoy embedded systems (i.MX 6, STM32), understand modern web frontend technologies and have diverse experience in lots of other IT areas including gstreamer, Qt and iOS. I want to be business-oriented and always try to understand my customer's needs and propose the best solution from both technical and financial points of view. In my free time I enjoy cycling and restoring vintage tape recorders. Always looking forward to work on interesting project where I can both apply my long-standing expertise and learn something new!</p>
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->                 
+                </section>
+                <!--//section-->
+                <section class="latest section">
+                    <div class="section-inner">
+                        <h2 class="heading">Latest Projects</h2>
+                        <div class="content">
+                            <div class="item featured text-center">
+                                <h3 class="title"><a href="http://portal.visiobox.ru/" target="_blank">VisioBox</a></h3>
+                                <p class="summary">SaaS and On-Premise content management system for digital signage</p>
+                                <div class="featured-image">
+                                    <a href="http://portal.visiobox.ru/" target="_blank">
+                                    <img class="img-responsive project-image" src="assets/images/projects/visiobox-01.png" alt="VisioBox" />
+                                    </a>
+                                    <!--
+                                    <div class="ribbon">
+                                        <div class="text">Game</div>
+                                    </div>
+                                    -->
+                                </div>
+                                <div class="desc text-left">
+                                    <p>This is a large system that consists of web application, video player API service, and several video players, including B2B TV, Android, Windows applications and custom-designed set-top box. I've participated in development of nearly every part of it and am very happy and proud that everything works smoothly.</p>
+                                </div>
+                                <!--//desc-->         
+                                <a class="btn btn-cta-secondary" href="#visiobox-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="visiobox-collapse"><i class="fa fa-caret-down"></i> View more</a>
+                                <div class="collapse" id="visiobox-collapse">
+                                    <div class="desc text-left" style="margin-top: 30px">
+                                        <p>My main role in this project is backend development. The following stack is used:</p>
+                                        <ul>
+                                            <lI><b>python</b> + <b>uwsgi</b> + <b>Flask</b> as RESTful API server</lI>
+                                            <li><b>aiohttp</b> for handling 1000+ online video players</li>
+                                            <li><b>celery</b> + <b>RabbitMQ</b> as asynchronous, background and periodic tasks queue</li>
+                                            <li><b>PostgreSQL</b> as persistent database</li>
+                                            <li><b>Redis</b> as database buffer and inter-process communicator</li>
+                                            <li><b>Elasticsearch</b> + <b>Logstash</b> + <b>Kibana</b> for telemetry collection and analysis</li>
+                                            <li><b>AWS S3</b> + <b>AWS CloudFront</b> for storing and serving media files</li>
+                                            <li><b>Docker</b> + <b>docker-compose</b> for small deployments and <b>AWS ECS</b> for high-availability deployments (also supported by <b>ELB</b> and <b>RDS</b>)</li>
+                                        </ul>
+                                        <p>Besides servers, I've also developed hardware video player:</p>
+                                        <ul>
+                                            <li><b>i.MX 6</b>-based ARM computer (Hummingboard)</li>
+                                            <li><b>Debian Jessie</b></li>
+                                            <li>Video player software is written on <b>python</b> with several <b>C</b> modules where extra performance is needed. Supports synchronous playback on multiple devices («video wall»)</li>
+                                            <li><b>gtk3</b> UI</li>
+                                            <li><b>gstreamer</b> as multimedia framework</li>
+                                            <li>Aambient light sensor, RFID reader, GPS, GPIO buttons, HDMI-cec control</li>
+                                            <li>Secure Boot protection, hardware-encrypted root volume, SD card wearout protection techniques, rescue boot mode</li>
+                                        </ul>
+                                        <p>And B2B TV video player application:</p>
+                                        <ul>
+                                            <li>Written with modern Javascript (<b>ES6</b>)</li>
+                                            <li>Supports <b>Samsung SSSP</b> and <b>LG webOS signage</b></li>
+                                            <li>Feature-rich and stable despite awful vendor API and poor documentation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="divider" />
+
+                            <div class="item row">
+                                <div class="desc col-md-12">
+                                    <h3 class="title">iCloud scraper</h3>
+                                    <p>A tool that downloads iCloud backup using customized version of <a href="https://github.com/horrorho/InflatableDonkey">InflatableDonkey</a> and parses it into SQL database. Supports Contacts, Calendar, Notes, Safari, Camera Roll, iMessage, Line Messenger, Viber, Whatsapp, QQ and WeChat; the main challenge was reverse-engineering binary formats of the last one.</p>
+                                </div>         
+                            </div>
+
+                            <div class="item row">
+                                <div class="desc col-md-12">
+                                    <h3 class="title">SaaS Facebook automation</h3>
+                                    <p>Private SaaS service that uses PhantomJS for automating various facebook tasks. PhantomJS app is written with <b>ES6</b> because it is really huge: it even can stream security checkup process to end user's browser. Another interesting technical solution in this project is using docker networks to route certain PhantomJS instances through certain VPNs (all running on the same host).</p>
+                                </div>
+                            </div>
+
+                            <hr class="divider" />
+
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/themylogin/3G-Player" target="_blank">
+                                    <img class="img-responsive project-image" src="assets/images/projects/3g-player-01.png" alt="3G Player" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/themylogin/3G-Player" target="_blank">3G Player</a> <span class="label label-theme">open source</span></h3>
+                                    <p>This is my personal project for creating the best <b>iOS</b> music player. It supports streaming and caching music from home server, fuzzy search, rich-feature playlist management, last.fm scrobbling, smart home integration and taking music recommendations from friends. I am not a professional iOS developer, but I've catched <b>Objective C</b> and <b>Cocoa Touch</b> very quickly and came out with application that runs very smoothly even on iPhone 4. Me and my music geek buddies use it every day with joy and pleasure and will never turn to Apple Music or Spotify!</p>
+                                    <p><a class="more-link" href="https://github.com/themylogin/3G-Player" target="_blank"><i class="fa fa-github"></i> View on GitHub</a></p>
+                                </div>         
+                            </div>
+
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/themylogin/theMediaShell" target="_blank">
+                                    <img class="img-responsive project-image" src="assets/images/projects/themediashell-01.png" alt="theMediaShell" />
+                                    <div style="height: 20px;"></div>
+                                    <img class="img-responsive project-image" src="assets/images/projects/themediashell-02.png" alt="theMediaShell" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/themylogin/theMediaShell" target="_blank">theMediaShell</a> <span class="label label-theme">open source</span></h3>
+                                    <p>Back in the days where the only option for building an HTPC was Intel Atom, this was my attempt to escape slowliness of Kodi and XBMC. Very fast, aware of NFS delays and fully packed with all the features needed for watching TV shows all night long and never touching the remote control, it was rewritten (with <b>C++</b> and <b>Qt</b>) dozen of times and is now the perfect movie player for me: it got ready just by the moment of my life where I've stopped enjoying wasting my time in front of TV :)</p>
+                                    <p><a class="more-link" href="https://github.com/themylogin/theMediaShell" target="_blank"><i class="fa fa-github"></i> View on GitHub</a></p>
+                                </div>         
+                            </div>
+
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/themylogin/last.fm.thelogin.ru" target="_blank">
+                                    <img class="img-responsive project-image" src="assets/images/projects/lastfmtheloginru-01.png" alt="theMediaShell" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/themylogin/last.fm.thelogin.ru" target="_blank">last.fm.thelogin.ru</a> <span class="label label-theme">open source</span></h3>
+                                    <p>This is my playground for performing deep data analysis on my and my friend's last.fm.scrobbles. I've studied <b>numpy</b>, <b>scipy</b> and <b>sklearn</b> crunching these numbers, inventing giant (and useless) analytics and making them calculate in reasonable amounts of time.</p>
+                                    <p><a class="more-link" href="https://github.com/themylogin/last.fm.thelogin.ru" target="_blank"><i class="fa fa-github"></i> View on GitHub</a></p>
+                                </div>         
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="experience section">
+                    <div class="section-inner">
+                        <h2 class="heading">Work Experience</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title">Freelance full-stack developer - <span class="year">(Oct 2016 - Present)</span></h3>
+                                <p>Trying to get the best reputation on Upwork and seeking for interesting long-term relationships.</p>
+                            </div>
+                            <div class="item">
+                                <h3 class="title">Backend developer - <span class="place"><a href="http://plag.com/" target="_blank">Plag </a></span> <span class="year">(Sep 2015 - Aug 2016)</span></h3>
+                                <p>Working on a team of really talented guys to support high-performance API for an offbeat social network.</p>
+                            </div>
+                            <div class="item">
+                                <h3 class="title">Full-stack developer - <span class="place"><a href="http://portal.visiobox.ru/" target="_blank">VisioBox </a></span> <span class="year">(Aug 2014 - Present)</span></h3>
+                                <p>Developing large and versatile video management system: from set-top box hardware to cloud servers orchestration. Growing very fast and trying not to break existing customers, developing new features in short terms and learning new things every day.</p>
+                            </div>
+                            <div class="item">
+                                <h3 class="title">Full-stack developer - <span class="place"><a href="https://spark.ru/startup/merku" target="_blank">Merku</a></span> <span class="year">(Sep 2013 - Jul 2014)</span></h3>
+                                <p>Creating a SaaS marketing research performing and analysis system. Using mathematical statistics and machine learning to get more knowledge out of phone and street surveys and helping marketers to get rid of giant, boring and confusing Excel spreadsheets.</p>
+                            </div>
+                            <div class="item">
+                                <h3 class="title">Freelance HTML/CSS/JS/PHP developer - <span class="year">(Dec 2005 - Sep 2013)</span></h3>
+                                <p>Back from the high school days I was always enjoying converting my programming skills into cash and in the free time was studying more interesting technologies and stacks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                <aside class="info aside section">
+                    <div class="section-inner">
+                        <h2 class="heading sr-only">Basic Information</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-clock-o"></i><span class="sr-only">Timezone:</span>UTC</li>
+                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:themylogin@gmail.com">themylogin@gmail.com</a></li>
+                                <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="https://themylogin.github.io" target="_blank">https://themylogin.github.io</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <aside class="skills aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Skills</h2>
+                        <div class="content">
+                            <div><b>Python:</b> flask, sqlalchemy, django, asyncio, celery, numpy, scipy, sklearn, nltk, PyQt, PyGtk, Cython, C extensions</div>
+                            <div><b>Javascript:</b> understand modern frameworks (Angular, React) and can help frontend team from time to time, same with Node.js</div>
+                            <div><b>C, C++:</b> glib, STL, boost, Qt</div>
+                            <div><b>AWS:</b> CloudFormation, EC2, ECS, RDS, S3, Lambda, API Gateway</div>
+                            <div><b>Software:</b> MySQL, PostgreSQL, RabbitMQ, Redis, ELK, Docker, ffmpeg
+                        </div>
+                    </div>
+                </aside>
+                <aside class="list aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Open-source contributions</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-github"></i> <a href="https://github.com/aio-libs/aiopg/issues/216" target="_blank">aiopg #216</a></li>
+                                <li><i class="fa fa-github"></i> <a href="https://github.com/mher/tornado-celery/pull/60" target="_blank">tornado-celery #60</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <aside class="feedback aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Clients feedback</h2>
+                        <div class="content">
+                            <blockquote>
+                                Vladamir is not only extremely knowledgeable, he is fast to respond and very courteous. He quickly found a solution to a problem on a package he had never seen before, that other freelancers had spent days trying to resolve. Vladamir is now my ‘go to guy’ for any Python projects.
+                                <div class="author">Stuart Anderson</div>
+                            </blockquote>
+                            <blockquote>
+                                A very skilled Python Engineer.
+                                <div class="author">Yennick Schepers</div>
+                            </blockquote>
+                            <blockquote>
+                                Vladimir has good coding and communication skills. He recommended the approach and design after seeing the requirements even before signing the contract . Will work again with Vladimir.
+                                <div class="author">Nitin Sawant</div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container text-center">
+            <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div>
+    </footer>
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>        
+</body>
+</html>
